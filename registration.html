@@ -16,23 +16,32 @@
                         <div class="green-number">1</div>
                         <div class="step__title">Step 1</div>
                     </div>
-                    <div class="step1__loadBar"></div>
-                    <label class="label">Full Name</label>
-                    <div><input type="text" placeholder="Full Name" name="Full Name" id="FullName" required oninput="validateRegistrationForm()"></div>
-                    <span id="FullNameError" class="error"></span>
+                    <div class="step1__loadBar" id="step1__loadBar"></div>
                 </div>
                 <div class="step2">
                     <div class="step2__number">
-                        <div class="gray-number">2</div>
+                        <div class="green-number">2</div>
                         <div class="step__title">Step 2</div>
                     </div>
-                    <div class="step2__loadBar"></div>
+                    <div class="step2__loadBar" id="step2__loadBar"></div>
+                </div>
+            </div>
+            <div class="stepsData">
+                <div class="dataToFill">
+                    <label class="label">Full Name:</label>
+                    <div><input type="text" class="fullName" placeholder="Full Name" name="Full Name" id="FullName" required oninput="validateRegistrationForm()"></div>
+                    <span id="FullNameError" class="error"></span>
+                </div>
+                <div class="dataToFill">
                     <label class="label">Date of Birth:</label>
-                    <div><input type="date" name="birthday" id="dateOfBirth" required oninput="validateRegistrationForm()"></div>
+                    <div><input type="date" name="birthday" class="dateOfBirth" id="dateOfBirth" required oninput="validateRegistrationForm()"></div>
                     <span id="dateOfBirthError" class="error"></span>
                 </div>
             </div>
-            <input type="submit" id="continueBtn" value="CONTINUE" class="continueBtn" disabled onclick="showNextStep()">
+
+            <div id="continueBtn__class">
+                <input type="submit" id="continueBtn" value="CONTINUE" class="continueBtn" disabled onclick="showNextStep()">
+            </div>
         </form>
 
         <div class="createAccount">Don’t have an account?<em> Create one here</em> and register for the event</div>
@@ -41,28 +50,36 @@
         <form id="content-container__form2" style="display: none;" onsubmit="return validateAndShowNextStep2()">
             <div class="second-form_line"></div>
             <div class="steps">
-                <div class="step1">
+                <div class="step3">
                     <div class="step1__number">
                         <div class="green-number">1</div>
                         <div class="step__title">Step 1</div>
                     </div>
-                    <div class="step1__loadBar"></div>
-                    <label class="label" for="email">Email:</label>
-                    <div><input type="text" placeholder="email@email.come" name="email" id="email" required oninput="validateRegistrationForm2()"></div>
-                    <span id="emailError" class="error"></span>
+                    <div class="step1__loadBar" id="step3__loadBar"></div>
                 </div>
-                <div class="step2">
+                <div class="step4">
                     <div class="step2__number">
                         <div class="green-number">2</div>
                         <div class="step__title">Step 2</div>
                     </div>
-                    <div class="step2__loadBar"></div>
+                    <div class="step2__loadBar" id="step4__loadBar"></div>
+                </div>
+            </div>
+            <div class="stepsData">
+                <div class="dataToFill">
+                    <label class="label" for="email">Email:</label>
+                    <div><input type="text" placeholder="email@email.come" name="email" id="email" required oninput="validateRegistrationForm2()"></div>
+                    <span id="emailError" class="error"></span>
+                </div>
+                <div class="dataToFill">
                     <label class="label" for="password">Password:</label>
                     <div><input type="text" name="password" id="password" required oninput="validateRegistrationForm2()"></div>
                     <span id="passwordError" class="error"></span>
                 </div>
             </div>
-            <input type="submit" id="registerBtn" value="REGISTER NOW" class="continueBtn" disabled onclick="validateAndShowNextStep2()">
+            <div id="registerBtn__class">
+                <input type="submit" id="registerBtn" value="REGISTER NOW" class="continueBtn" disabled onclick="validateAndShowNextStep2()">
+            </div>
         </form>
         <div id="secondFormData" style="display: none;">
             <div class="createAccount">Don’t have an account?<em> Create one here</em> and register for the event</div>

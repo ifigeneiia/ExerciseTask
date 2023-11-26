@@ -6,7 +6,7 @@ function renderSection(){
             })
             .catch(error => console.error('Error loading HTML file:', error));
 
-    fetch("./data.json")
+    fetch("https://api.coinlore.net/api/tickers/")
             .then(res => res.json())
             .then((data) =>{ 
                 let data1=""
@@ -48,6 +48,7 @@ function validateRegistrationForm() {
     var dobInput = document.getElementById('dateOfBirth');
     var dobError = document.getElementById('dateOfBirthError');
     var continueBtn = document.getElementById('continueBtn');
+    var step1__loadBar = document.getElementById('step1__loadBar');
 
     fullNameError.innerHTML = '';
     dobError.innerHTML = '';
@@ -77,7 +78,12 @@ function validateRegistrationForm() {
         return false;
     }
 
+    if(fullNameInput.value !== "" && dobInput.value === "" ){
+        step1__loadBar.style.background = 'linear-gradient(to right, green 50%, white 0%)'
+    }
+
     if(fullNameInput.value !== "" && dobInput.value !== "" ){
+        step1__loadBar.style.background = 'green'
         continueBtn.disabled = false;
     }
 }
@@ -90,6 +96,10 @@ function validateAndShowNextStep() {
 }
 
 function showNextStep() {
+    var step1__loadBar = document.getElementById('step1__loadBar');
+    step1__loadBar.style.background = 'green'
+    var step3__loadBar = document.getElementById('step3__loadBar');
+        step3__loadBar.style.background = 'green'
     var secondForm = document.getElementById('content-container__form2');
     secondForm.style.display = 'block';
     var secondFormData = document.getElementById('secondFormData');
@@ -141,6 +151,8 @@ function validateRegistrationForm2() {
         registerBtn.disabled = requirements.some(requirement => !requirement.regex.test(password));
         return false;
     } else {
+        var step3__loadBar = document.getElementById('step3__loadBar');
+        step3__loadBar.style.background = 'green'
         registerBtn.disabled = false;
         return true;
     }
@@ -154,6 +166,14 @@ function validateAndShowNextStep2() {
         return false;
 }
 function showSuccess() {
+    var step1__loadBar = document.getElementById('step1__loadBar');
+    step1__loadBar.style.background = 'green'
+    var step2__loadBar = document.getElementById('step2__loadBar');
+    step2__loadBar.style.background = 'green'
+    var step4__loadBar = document.getElementById('step4__loadBar');
+    step4__loadBar.style.background = 'green'
+    var step3__loadBar = document.getElementById('step3__loadBar');
+    step3__loadBar.style.background = 'green'
     var thirdPart = document.getElementById('content-container__last');
     thirdPart.style.display = 'block';
 }
