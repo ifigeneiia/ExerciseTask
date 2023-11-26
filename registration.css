@@ -1,0 +1,230 @@
+div#content-container__registartion {
+    margin: 5% 10%;
+}
+
+.steps{
+    display: flex;
+    justify-content: space-around;
+    margin: 0px 15%;
+}
+
+.green-number{
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFF;
+    height: 25px;
+    width: 25px;
+    background: #29A642;
+    border-radius: 50%;
+    display: inline-block;
+    padding: 5px;
+    border: 1px solid #29A642;
+    background-clip: content-box;
+    margin-right: 10px;
+}
+
+.gray-number{
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #201D27;
+    height: 25px;
+    width: 25px;
+    background: #CCCCCC;
+    border-radius: 50%;
+    display: inline-block;
+    padding: 5px;
+    border: 1px solid #CCCCCC;
+    background-clip: content-box;
+    margin-right: 10px;
+}
+
+.step__title{
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #CCCCCC;
+}
+
+.step1 ,.step2 {
+    display: block;
+}
+
+.step1__number, .step2__number{
+    display: flex;
+    align-items: center;
+}
+
+.step1__loadBar, .step2__loadBar{
+    width: 403px;
+    height: 8px;
+    border-radius: 4px;
+    background: #DDDDDD;
+    margin: 20px 0;
+}
+
+.label {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #FFFFFF;
+}
+input {
+    width: 403px;
+    height: 40px;
+}
+
+input::placeholder, input#birthday::placeholder{
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #B1B1B1;
+}
+
+.continueBtn{
+    width: 345px;
+    height: 40px;
+    background-color: #29A643;
+    font-family: Bebas Neue Pro;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 5% 40%;
+}
+
+.continueBtn:disabled{
+    width: 345px;
+    height: 40px;
+    background-color: #CCCCCC;
+    font-family: Bebas Neue Pro;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 5% 40%;
+}
+
+.error{
+    color: red;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.createAccount{
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.createAccount em { 
+    color: #D51820;
+    font-style: unset;
+    text-decoration: underline;
+}
+
+.terms {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 20px;
+}
+.terms em { 
+    color: #D51820;
+    font-style: unset;
+}
+
+.second-form_line{
+    margin: 5% 15%;
+    border: 1px solid #FFFFFF
+}
+
+.password__requires,.password__requires_green{
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #959595;
+    margin: 10px 0;
+}
+
+.password__requires_green{
+    color: #29A643;
+}
+
+.success_message{
+    width: 35%;
+    padding: 30px;
+    height: 200px;
+    background-color: #F3FEF4;
+    border: 1px solid #31B63B;
+    margin: 3% 23%;
+}
+.message{
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #3C763D;
+    margin-left: 20px;
+}
+.message2{
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #3C763D;
+}
+.part_one {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6%;
+}
+.registered{
+    font-family: Bayon;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 43px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}

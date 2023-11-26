@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registration.css">
+    <title>FEDsMKT</title>
+    <script src="./redirect.js"></script>
+</head>
+<body>
+    <div id="content-container__registartion">
+        <form id="content-container__form" onsubmit="return validateAndShowNextStep()">
+            <div class="steps">
+                <div class="step1">
+                    <div class="step1__number">
+                        <div class="green-number">1</div>
+                        <div class="step__title">Step 1</div>
+                    </div>
+                    <div class="step1__loadBar"></div>
+                    <label class="label">Full Name</label>
+                    <div><input type="text" placeholder="Full Name" name="Full Name" id="FullName" required oninput="validateRegistrationForm()"></div>
+                    <span id="FullNameError" class="error"></span>
+                </div>
+                <div class="step2">
+                    <div class="step2__number">
+                        <div class="gray-number">2</div>
+                        <div class="step__title">Step 2</div>
+                    </div>
+                    <div class="step2__loadBar"></div>
+                    <label class="label">Date of Birth:</label>
+                    <div><input type="date" name="birthday" id="dateOfBirth" required oninput="validateRegistrationForm()"></div>
+                    <span id="dateOfBirthError" class="error"></span>
+                </div>
+            </div>
+            <input type="submit" id="continueBtn" value="CONTINUE" class="continueBtn" disabled onclick="showNextStep()">
+        </form>
+
+        <div class="createAccount">Don’t have an account?<em> Create one here</em> and register for the event</div>
+        <div class="terms">Terms and Conditions apply<em>*</em>. To read the full T&Cs,<em> click here.</em></div>
+
+        <form id="content-container__form2" style="display: none;" onsubmit="return validateAndShowNextStep2()">
+            <div class="second-form_line"></div>
+            <div class="steps">
+                <div class="step1">
+                    <div class="step1__number">
+                        <div class="green-number">1</div>
+                        <div class="step__title">Step 1</div>
+                    </div>
+                    <div class="step1__loadBar"></div>
+                    <label class="label" for="email">Email:</label>
+                    <div><input type="text" placeholder="email@email.come" name="email" id="email" required oninput="validateRegistrationForm2()"></div>
+                    <span id="emailError" class="error"></span>
+                </div>
+                <div class="step2">
+                    <div class="step2__number">
+                        <div class="green-number">2</div>
+                        <div class="step__title">Step 2</div>
+                    </div>
+                    <div class="step2__loadBar"></div>
+                    <label class="label" for="password">Password:</label>
+                    <div><input type="text" name="password" id="password" required oninput="validateRegistrationForm2()"></div>
+                    <span id="passwordError" class="error"></span>
+                </div>
+            </div>
+            <input type="submit" id="registerBtn" value="REGISTER NOW" class="continueBtn" disabled onclick="validateAndShowNextStep2()">
+        </form>
+        <div id="secondFormData" style="display: none;">
+            <div class="createAccount">Don’t have an account?<em> Create one here</em> and register for the event</div>
+            <div class="terms">Terms and Conditions apply<em>*</em>. To read the full T&Cs,<em> click here.</em></div>
+        </div>
+
+        <div id="content-container__last" style="display: none;">
+            <div class="second-form_line"></div>
+            <label class="registered">Registered Successfully State</label>
+            <div class="success_message">
+                <div class="part_one">
+                    <img src="assets/circle-check-solid.png" alt="check" >
+                    <label class="message">Registration Successful</label>
+                </div>
+                <div class="part_two">
+                    <img src="assets/arrow.png" alt="arrow" >
+                    <label class="message2">Thank you for registering for our event with XM. You will receive an email shortly with confirmation of your registration.</label>
+                </div>
+            </div>
+            <div class="createAccount">Don’t have an account?<em> Create one here</em> and register for the event</div>
+            <div class="terms">Terms and Conditions apply<em>*</em>. To read the full T&Cs,<em> click here.</em></div>
+        </div>
+    </div>
+</body>
+</html>
